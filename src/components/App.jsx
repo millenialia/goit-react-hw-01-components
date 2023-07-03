@@ -1,14 +1,13 @@
-import { Profile } from './Profile';
-import { FriendList } from './FriendList';
-import { Statistics } from './Statistics';
-import { TransactionHistory } from './TransactionHistory';
+import { Profile } from './Profile/Profile';
+import { FriendList } from './FriendList/FriendList';
+import { Statistics } from './Statistics/Statistics';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
-import user from '../json/user.json';
-import friends from '../json/friends.json';
-import data from '../json/data.json';
-import transactions from '../json/transactions.json'
+import user from './Profile/user.json';
+import friends from './FriendList/friends.json';
+import data from './Statistics/data.json';
+import transactions from './TransactionHistory/transactions.json';
 
-import '../index.css'
 
 export const App = () => {
   return (
@@ -20,7 +19,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics stats={data} />
+      <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </div>

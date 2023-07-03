@@ -1,0 +1,12 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 500px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 50px;
+}
