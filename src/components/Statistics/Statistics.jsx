@@ -6,7 +6,7 @@ import css from './Statistics.module.css'
 export const Statistics = ({title, stats}) => {
   return (
     <section className={css.statistics}>
-      {title ? (<h2 className={css.title}>{title}</h2>) : (<h2 className={css.title}>NO TITLE</h2>)}
+      {title && (<h2 className={css.title}>{title}</h2>)}
       <ul className={css.list}>
         {stats.map(one=>(<StatisticData
           key={one.id}
@@ -19,6 +19,6 @@ export const Statistics = ({title, stats}) => {
 }
 
 Statistics.propTypes = {
-  stats: PropTypes.array,
+  stats: PropTypes.array.isRequired,
   title: PropTypes.string,
 }
